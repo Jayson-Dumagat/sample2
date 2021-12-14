@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+    <head> 
+        <link rel="stylesheet" href="Design.css">
+    </head>
+        <title> Welcome to CITISTYLES! - A clothing store for all of your needs.</title>
+
+    <body> 
+
+        <!-- Responsive navigation bar -->
+        <header class="header">  
+            <a href="index.html" class="logo">CITI STYLES</a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+            <ul class="menu">
+              <li><a href="website1.html">Home</a></li>
+              <li><a href="product1.html">Products</a></li>
+              <li><a href="aboutus.html">About</a></li>
+              <li><a href="contactus.html">Contact Us</a></li>
+              <li><a href="access.html">Login / Signup
+              </a></li>
+            </ul>
+        </header><br><br><br>
+        <div class="pcat">
+          <!-- Product Categories -->
+          <button class="tablink" onclick="openPage('NewArr', this, '#222725')" id="defaultOpen">New Arrivals</button>
+          <button class="tablink" onclick="openPage('MenApp', this, '#222725')" >Men's Apparel</button>
+          <button class="tablink" onclick="openPage('WomenApp', this, '#222725')">Women's Apparel</button>
+          <button class="tablink" onclick="openPage('Accessories', this, '#222725')">Accessories</button>
+
+          <div id="NewArr" class="tabcontent">
+            <h3>New Arrivals!</h3>
+            <p>Coming Soon!</p>
+
+          </div>
+
+          <div id="MenApp" class="tabcontent">
+           <h3>Men's Apparels</h3>
+            
+            <img src="img1.jpg">
+            <div class="textbox">
+              
+            </div> 
+           
+            <img src="img2.jpg">
+            <div class="textbox1">
+
+            </div>
+           
+           <img src="img3.jpg">
+           <div class="textbox2">
+
+           </div>
+
+           <img src="img4.jpg">
+           <div class="textbox3">
+            
+           </div>
+           <img src="img5.jpg">
+           <div class="textbox4">
+
+           </div>
+           
+           <img src="img6.jpg">
+           <div class="textbox5">
+
+           </div>
+          </div>
+
+          <div id="WomenApp" class="tabcontent">
+            <h3>Women's Apparel</h3>
+            <p>Get in touch, or swing by for a cup of coffee.</p>
+          </div>
+
+          <div id="Accessories" class="tabcontent">
+            <h3>Accessories</h3>
+            <p>Who we are and what we do.</p>
+          </div>
+        </div>
+        
+      <!-- Script for the Product page categories -->
+      <script>
+  
+        // This function is for the categories so that it will work properly
+        function openPage(pageName,elmnt,color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                 tabcontent[i].style.display = "none";
+               }
+            tablinks = document.getElementsByClassName("tablink");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+                }
+             document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+          }
+
+          // The id with defaultOpen will be automatically opened when the product page is visited
+            document.getElementById("defaultOpen").click();
+
+
+       </script>
+    </body>
+</html>

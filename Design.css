@@ -1,0 +1,351 @@
+body,html {
+    background-color: #fff;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    height: 98%;
+    scroll-behavior:smooth;
+
+}
+#bodybg {
+  background-image: url(imgbackground.jpg);
+  background-size: 55%;
+}
+
+  a {
+    color: #121113; 
+  }
+  
+  /* header */
+  
+  .header {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    
+  }
+  
+  .header ul {
+    margin-right: 3%;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+    background-color: #222725;
+    color: #f7f7f2;
+  }
+  
+  .header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-left: 1%;
+    margin-top: 0.5%;
+  }
+  
+  /* menu */
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .3s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .nav-icon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .3s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .nav-icon:before,
+  .header .menu-icon .nav-icon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .3s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .nav-icon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .nav-icon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 300px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top:0;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top:0;
+  }
+  
+  
+  /* 48em = 768px @ 16pt font */
+  
+  @media (min-width: 48em) {
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+  } 
+
+.pcat {
+  display: block;
+  margin: 3% 0 0 0;
+}
+
+/* Style tab links */
+.tablink {
+
+  background-color: #121113;
+  color: #f7f7f2;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 15px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #f7f7f2;
+  color: #121113;
+}
+#defaultOpen:hover {
+  background-color: #f7f7f2;
+  color: #121113;
+}
+
+
+/* Designs for the tabs */
+.tabcontent {
+  color: #121113;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+  display:inline;
+}
+
+.tabcontent img{
+
+    height: 350px;
+    width: 300px;
+    padding: 50px;
+  }
+  
+  /* reveals the contents of the categories tab*/
+  .show {
+    display:block;
+  }
+
+  .lowersection {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.3);
+
+  }
+
+  .lowersection img {
+    float: left;
+    height: 60%;
+    width: 47%;
+    
+    margin-left: 3%;
+  }
+
+  .fpdesign {
+    float: right;
+    height: 60%;
+    width: 47%;
+    background-color: #121113;
+    margin-right: 3%;
+    color:#f7f7f2;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    font-style: italic;
+    font-size: 32px;
+  }
+
+.shopbtn {
+  font-family:  Helvetica, sans-serif;
+  color: #222722;
+  text-decoration: none;
+
+  display: block ;
+  background-color: #f7f7f2;
+  width: 300px;
+  margin-left: 22.5%;
+  height: 70px;
+  padding-top: 30px;
+  border-radius: 100px;
+  
+  
+}
+
+.shopbtn :hover{
+  cursor: pointer;
+  background-color: #121113;
+  color: #f7f7f2;
+}
+
+  /*******************************/
+
+
+
+.botsection {
+  float:right;
+  margin-top: 10%;
+  background-color: #fff;
+  height: 55%;
+  width: 55.4%;
+  margin-right: 0%;
+
+  
+  padding: 10px;
+}
+.aboutus {
+  margin: 1%;
+  display: block;
+  float: left;
+  padding: 1%;
+}
+.aboutus h1, p {
+  font-family:  Helvetica, sans-serif;
+  color: #121113;
+}
+
+.contactus {
+  margin-top: 10%;
+  height: 100%;
+  width: 70%;
+  background-color: #222725;
+  padding-bottom: 5%;
+}
+.contactus h1,span {
+
+  font-family: s Helvetica, sans-serif;
+  color: #fff;
+  padding-right: 10%;
+  padding-left: 10%;
+
+}
+
+.contactpfp{
+  border-radius: 100%;
+  height: 300px;
+  width: 300px;
+}
+
+.box{
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #191919;
+  text-align: center;
+}
+.box h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.box input[type = "text"],.box input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #e4e6c3;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+  width: 280px;
+  border-color: #899878;
+}
+.box input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #e4e6c3;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.box input[type = "submit"]:hover{
+  background: #899878;
+}
+
+
